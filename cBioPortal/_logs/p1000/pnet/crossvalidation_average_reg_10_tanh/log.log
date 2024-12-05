@@ -1,0 +1,531 @@
+12/04 11:47 - {logs.py:22} - setting logs
+12/04 11:47 - {run_me.py:108} - random seed 234
+12/04 11:47 - {crossvalidation_pipeline.py:127} - 当前处于crossvalidation_pipeline.py文件中, loading data....
+12/04 11:47 - {data_reader.py:109} - loading mut_important
+12/04 11:47 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_final_analysis_set_cross_important_only.csv,
+12/04 11:47 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:47 - {data_reader.py:215} - loading response from response_paper.csv
+12/04 11:47 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:47 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:47 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:47 - {data_reader.py:121} - mut_binary = True
+12/04 11:47 - {data_reader.py:109} - loading cnv_del
+12/04 11:47 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:47 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:47 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:47 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:47 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:47 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:47 - {data_reader.py:109} - loading cnv_amp
+12/04 11:47 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:47 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:47 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:47 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:47 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:47 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:47 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:47 - {data_reader.py:275} - After combining, loaded data 1053 samples, 24765 variables, 1053 responses 
+12/04 11:47 - {crossvalidation_pipeline.py:151} - 当前处于crossvalidation_pipeline.py文件中， 现在开始来拟合当前1的这个模型！  fitting model ...
+12/04 11:47 - {crossvalidation_pipeline.py:163} - fitting model ...
+12/04 11:47 - {crossvalidation_pipeline.py:341} - 当前处于crossvalidation_pipeline.py文件中， 目前的模型参数情况为：model_params: {'type': 'nn', 'id': 'P-net_ALL', 'params': {'build_fn': <function build_pnet2 at 0x000002542DE2A730>, 'model_params': {'use_bias': True, 'w_reg': [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001], 'w_reg_outcomes': [0.01, 0.01, 0.01, 0.01, 0.01, 0.01], 'dropout': [0.5, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1], 'loss_weights': [2, 7, 20, 54, 148, 400], 'optimizer': 'Adam', 'activation': 'tanh', 'data_params': {'id': 'ALL', 'type': 'prostate_paper', 'params': {'data_type': ['mut_important', 'cnv_del', 'cnv_amp'], 'drop_AR': False, 'cnv_levels': 3, 'mut_binary': True, 'balanced_data': False, 'combine_type': 'union', 'use_coding_genes_only': True, 'selected_genes': 'tcga_prostate_expressed_genes_and_cancer_genes.csv', 'training_split': 0}}, 'add_unk_genes': False, 'shuffle_genes': False, 'kernel_initializer': 'lecun_uniform', 'n_hidden_layers': 5, 'attention': False, 'dropout_testing': False}, 'fitting_params': {'samples_per_epoch': 10, 'select_best_model': False, 'monitor': 'val_o6_f1', 'verbose': 2, 'epoch': 80, 'shuffle': True, 'batch_size': 50, 'save_name': 'pnet', 'debug': False, 'save_gradient': False, 'class_weight': {0: 1, 1: 1}, 'n_outputs': 6, 'prediction_output': 'average', 'early_stop': False, 'reduce_lr': False, 'reduce_lr_after_nepochs': {'drop': 0.25, 'epochs_drop': 50}, 'lr': 0.001, 'max_f1': True}, 'WeightOutputLayers': [0, 1], 'gradients': None, 'gradients_Flag': False, 'feature_importance': 'deepexplain_grad*input'}}
+12/04 11:47 - {nn.py:156} - class_weight {0: 1, 1: 1}
+12/04 11:47 - {crossvalidation_pipeline.py:410} - fold # ----------------0---------
+12/04 11:47 - {one_split.py:316} - 现在是pipline/one_split.py文件，preprocessing....
+12/04 11:47 - {pre.py:10} - Pre-processing: None
+12/04 11:47 - {crossvalidation_pipeline.py:417} - 当前处于crossvalidation_pipeline.py文件中，现在进行特征提取！  feature extraction....
+12/04 11:47 - {data_reader.py:109} - loading mut_important
+12/04 11:47 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_final_analysis_set_cross_important_only.csv,
+12/04 11:47 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:47 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:47 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:47 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:47 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:47 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:47 - {data_reader.py:121} - mut_binary = True
+12/04 11:47 - {data_reader.py:109} - loading cnv_del
+12/04 11:47 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:47 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:47 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:47 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:47 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:47 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:47 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:47 - {data_reader.py:109} - loading cnv_amp
+12/04 11:47 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:47 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:47 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:47 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:47 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:47 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:47 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:48 - {data_reader.py:275} - After combining, loaded data 1053 samples, 24765 variables, 1053 responses 
+12/04 11:48 - {prostate_models.py:149} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/04 11:48 - {prostate_models.py:151} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/04 11:48 - {builders_utils.py:105} - layer 0 , # of edges  14836.0
+12/04 11:48 - {builders_utils.py:105} - layer 1 , # of edges  1396.0
+12/04 11:48 - {builders_utils.py:105} - layer 2 , # of edges  1070.0
+12/04 11:48 - {builders_utils.py:105} - layer 3 , # of edges  447.0
+12/04 11:48 - {builders_utils.py:105} - layer 4 , # of edges  148.0
+12/04 11:48 - {builders_utils.py:105} - layer 5 , # of edges  26.0
+12/04 11:48 - {builders_utils.py:901} - n_genes, n_pathways 8255 1374 
+12/04 11:48 - {builders_utils.py:901} - n_genes, n_pathways 1374 1056 
+12/04 11:48 - {builders_utils.py:901} - n_genes, n_pathways 1056 443 
+12/04 11:48 - {builders_utils.py:901} - n_genes, n_pathways 443 146 
+12/04 11:48 - {builders_utils.py:901} - n_genes, n_pathways 146 26 
+12/04 11:48 - {prostate_models.py:301} - 目前在prostate_models.py文件中， done compiling
+12/04 11:48 - {model_utils.py:46} -   - 0 inputs (None, 24765)
+12/04 11:48 - {model_utils.py:46} -   - 1 lambda_1 (None, 24765)
+12/04 11:48 - {model_utils.py:46} -   - 2 h0 (None, 8255)
+12/04 11:48 - {model_utils.py:46} -   - 3 lambda_2 (None, 8255)
+12/04 11:48 - {model_utils.py:46} -   - 4 h1 (None, 1374)
+12/04 11:48 - {model_utils.py:46} -   - 5 lambda_3 (None, 1374)
+12/04 11:48 - {model_utils.py:46} -   - 6 h2 (None, 1056)
+12/04 11:48 - {model_utils.py:46} -   - 7 lambda_4 (None, 1056)
+12/04 11:48 - {model_utils.py:46} -   - 8 h3 (None, 443)
+12/04 11:48 - {model_utils.py:46} -   - 9 lambda_5 (None, 443)
+12/04 11:48 - {model_utils.py:46} -   - 10 h4 (None, 146)
+12/04 11:48 - {model_utils.py:46} -   - 11 lambda_6 (None, 146)
+12/04 11:48 - {model_utils.py:46} -   - 12 h5 (None, 26)
+12/04 11:48 - {model_utils.py:46} -   - 13 o_linear1 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 14 o_linear2 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 15 o_linear3 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 16 o_linear4 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 17 o_linear5 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 18 o_linear6 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 19 o1 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 20 o2 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 21 o3 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 22 o4 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 23 o5 (None, 1)
+12/04 11:48 - {model_utils.py:46} -   - 24 o6 (None, 1)
+12/04 11:48 - {prostate_models.py:305} - None
+12/04 11:48 - {prostate_models.py:306} - # of trainable params of the model is 65235
+12/04 11:48 - {nn.py:306} - 目前为：nn.py 文件，start fitting
+12/04 11:48 - {nn.py:214} - 现在根据梯度信息对网络的输出值进行了注意力强化 
+12/04 11:48 - {nn.py:318} - 目前为：nn.py 文件，class_weight {0: 1, 1: 1}
+12/04 11:49 - {nn.py:399} - 目前为：nn.py 文件，prediction threshold 0.3799999999999999
+12/04 11:50 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/04 11:50 - {evaluate.py:54} -               precision    recall  f1-score   support
+
+           0       0.89      0.87      0.88       145
+           1       0.83      0.85      0.84       108
+
+    accuracy                           0.86       253
+   macro avg       0.86      0.86      0.86       253
+weighted avg       0.86      0.86      0.86       253
+
+12/04 11:50 - {crossvalidation_pipeline.py:859} - 当前处于crossvalidation_pipeline.py文件中，model P-net_ALL -- Test score {'accuracy': 0.8616600790513834, 'precision': 0.8288288288288288, 'auc': 0.9236909323116219, 'f1': 0.8401826484018264, 'aupr': 0.8932925339517093, 'recall': 0.8518518518518519}
+12/04 11:50 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_testing_fold_0.csv
+12/04 11:50 - {crossvalidation_pipeline.py:863} - 目前在crossvalidation_pipeline.py这个文件中，saving coef
+12/04 11:50 - {crossvalidation_pipeline.py:55} - saving model P-net_ALL_0 coef to dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs)
+12/04 11:50 - {crossvalidation_pipeline.py:59} - FS dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs\P-net_ALL_0.h5)
+12/04 11:50 - {crossvalidation_pipeline.py:867} - 目前在crossvalidation_pipeline.py这个文件中，predicting training ...
+12/04 11:50 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/04 11:50 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_traing_fold_0.csv
+12/04 11:50 - {nn.py:156} - class_weight {0: 1, 1: 1}
+12/04 11:50 - {crossvalidation_pipeline.py:410} - fold # ----------------1---------
+12/04 11:50 - {one_split.py:316} - 现在是pipline/one_split.py文件，preprocessing....
+12/04 11:50 - {pre.py:10} - Pre-processing: None
+12/04 11:50 - {crossvalidation_pipeline.py:417} - 当前处于crossvalidation_pipeline.py文件中，现在进行特征提取！  feature extraction....
+12/04 11:50 - {data_reader.py:109} - loading mut_important
+12/04 11:50 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_final_analysis_set_cross_important_only.csv,
+12/04 11:50 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:50 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:50 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:50 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:50 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:50 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:50 - {data_reader.py:121} - mut_binary = True
+12/04 11:50 - {data_reader.py:109} - loading cnv_del
+12/04 11:50 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:50 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:50 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:50 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:50 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:50 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:50 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:50 - {data_reader.py:109} - loading cnv_amp
+12/04 11:50 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:50 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:50 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:50 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:50 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:50 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:50 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:51 - {data_reader.py:275} - After combining, loaded data 1053 samples, 24765 variables, 1053 responses 
+12/04 11:51 - {prostate_models.py:149} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/04 11:51 - {prostate_models.py:151} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/04 11:51 - {builders_utils.py:105} - layer 0 , # of edges  14836.0
+12/04 11:51 - {builders_utils.py:105} - layer 1 , # of edges  1396.0
+12/04 11:51 - {builders_utils.py:105} - layer 2 , # of edges  1070.0
+12/04 11:51 - {builders_utils.py:105} - layer 3 , # of edges  447.0
+12/04 11:51 - {builders_utils.py:105} - layer 4 , # of edges  148.0
+12/04 11:51 - {builders_utils.py:105} - layer 5 , # of edges  26.0
+12/04 11:51 - {builders_utils.py:901} - n_genes, n_pathways 8255 1374 
+12/04 11:51 - {builders_utils.py:901} - n_genes, n_pathways 1374 1056 
+12/04 11:51 - {builders_utils.py:901} - n_genes, n_pathways 1056 443 
+12/04 11:51 - {builders_utils.py:901} - n_genes, n_pathways 443 146 
+12/04 11:51 - {builders_utils.py:901} - n_genes, n_pathways 146 26 
+12/04 11:51 - {prostate_models.py:301} - 目前在prostate_models.py文件中， done compiling
+12/04 11:51 - {model_utils.py:46} -   - 0 inputs (None, 24765)
+12/04 11:51 - {model_utils.py:46} -   - 1 lambda_7 (None, 24765)
+12/04 11:51 - {model_utils.py:46} -   - 2 h0 (None, 8255)
+12/04 11:51 - {model_utils.py:46} -   - 3 lambda_8 (None, 8255)
+12/04 11:51 - {model_utils.py:46} -   - 4 h1 (None, 1374)
+12/04 11:51 - {model_utils.py:46} -   - 5 lambda_9 (None, 1374)
+12/04 11:51 - {model_utils.py:46} -   - 6 h2 (None, 1056)
+12/04 11:51 - {model_utils.py:46} -   - 7 lambda_10 (None, 1056)
+12/04 11:51 - {model_utils.py:46} -   - 8 h3 (None, 443)
+12/04 11:51 - {model_utils.py:46} -   - 9 lambda_11 (None, 443)
+12/04 11:51 - {model_utils.py:46} -   - 10 h4 (None, 146)
+12/04 11:51 - {model_utils.py:46} -   - 11 lambda_12 (None, 146)
+12/04 11:51 - {model_utils.py:46} -   - 12 h5 (None, 26)
+12/04 11:51 - {model_utils.py:46} -   - 13 o_linear1 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 14 o_linear2 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 15 o_linear3 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 16 o_linear4 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 17 o_linear5 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 18 o_linear6 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 19 o1 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 20 o2 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 21 o3 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 22 o4 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 23 o5 (None, 1)
+12/04 11:51 - {model_utils.py:46} -   - 24 o6 (None, 1)
+12/04 11:51 - {prostate_models.py:305} - None
+12/04 11:51 - {prostate_models.py:306} - # of trainable params of the model is 65235
+12/04 11:51 - {nn.py:306} - 目前为：nn.py 文件，start fitting
+12/04 11:51 - {nn.py:214} - 现在根据梯度信息对网络的输出值进行了注意力强化 
+12/04 11:51 - {nn.py:318} - 目前为：nn.py 文件，class_weight {0: 1, 1: 1}
+12/04 11:53 - {nn.py:399} - 目前为：nn.py 文件，prediction threshold 0.44999999999999984
+12/04 11:55 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/04 11:55 - {evaluate.py:54} -               precision    recall  f1-score   support
+
+           0       0.85      0.93      0.89       145
+           1       0.89      0.78      0.83       108
+
+    accuracy                           0.87       253
+   macro avg       0.87      0.85      0.86       253
+weighted avg       0.87      0.87      0.86       253
+
+12/04 11:55 - {crossvalidation_pipeline.py:859} - 当前处于crossvalidation_pipeline.py文件中，model P-net_ALL -- Test score {'accuracy': 0.8656126482213439, 'precision': 0.8936170212765957, 'auc': 0.9055555555555556, 'f1': 0.8316831683168316, 'aupr': 0.8870851513018843, 'recall': 0.7777777777777778}
+12/04 11:55 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_testing_fold_1.csv
+12/04 11:55 - {crossvalidation_pipeline.py:863} - 目前在crossvalidation_pipeline.py这个文件中，saving coef
+12/04 11:55 - {crossvalidation_pipeline.py:55} - saving model P-net_ALL_1 coef to dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs)
+12/04 11:55 - {crossvalidation_pipeline.py:59} - FS dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs\P-net_ALL_1.h5)
+12/04 11:55 - {crossvalidation_pipeline.py:867} - 目前在crossvalidation_pipeline.py这个文件中，predicting training ...
+12/04 11:55 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/04 11:55 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_traing_fold_1.csv
+12/04 11:55 - {nn.py:156} - class_weight {0: 1, 1: 1}
+12/04 11:55 - {crossvalidation_pipeline.py:410} - fold # ----------------2---------
+12/04 11:55 - {one_split.py:316} - 现在是pipline/one_split.py文件，preprocessing....
+12/04 11:55 - {pre.py:10} - Pre-processing: None
+12/04 11:55 - {crossvalidation_pipeline.py:417} - 当前处于crossvalidation_pipeline.py文件中，现在进行特征提取！  feature extraction....
+12/04 11:55 - {data_reader.py:109} - loading mut_important
+12/04 11:55 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_final_analysis_set_cross_important_only.csv,
+12/04 11:55 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:55 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:55 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:55 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:55 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:55 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:55 - {data_reader.py:121} - mut_binary = True
+12/04 11:55 - {data_reader.py:109} - loading cnv_del
+12/04 11:55 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:55 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:55 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:55 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:55 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:55 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:55 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:55 - {data_reader.py:109} - loading cnv_amp
+12/04 11:55 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:55 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:55 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:55 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:55 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:55 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:55 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:55 - {data_reader.py:275} - After combining, loaded data 1053 samples, 24765 variables, 1053 responses 
+12/04 11:55 - {prostate_models.py:149} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/04 11:55 - {prostate_models.py:151} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/04 11:55 - {builders_utils.py:105} - layer 0 , # of edges  14836.0
+12/04 11:55 - {builders_utils.py:105} - layer 1 , # of edges  1396.0
+12/04 11:55 - {builders_utils.py:105} - layer 2 , # of edges  1070.0
+12/04 11:55 - {builders_utils.py:105} - layer 3 , # of edges  447.0
+12/04 11:55 - {builders_utils.py:105} - layer 4 , # of edges  148.0
+12/04 11:55 - {builders_utils.py:105} - layer 5 , # of edges  26.0
+12/04 11:55 - {builders_utils.py:901} - n_genes, n_pathways 8255 1374 
+12/04 11:55 - {builders_utils.py:901} - n_genes, n_pathways 1374 1056 
+12/04 11:55 - {builders_utils.py:901} - n_genes, n_pathways 1056 443 
+12/04 11:55 - {builders_utils.py:901} - n_genes, n_pathways 443 146 
+12/04 11:55 - {builders_utils.py:901} - n_genes, n_pathways 146 26 
+12/04 11:55 - {prostate_models.py:301} - 目前在prostate_models.py文件中， done compiling
+12/04 11:55 - {model_utils.py:46} -   - 0 inputs (None, 24765)
+12/04 11:55 - {model_utils.py:46} -   - 1 lambda_13 (None, 24765)
+12/04 11:55 - {model_utils.py:46} -   - 2 h0 (None, 8255)
+12/04 11:55 - {model_utils.py:46} -   - 3 lambda_14 (None, 8255)
+12/04 11:55 - {model_utils.py:46} -   - 4 h1 (None, 1374)
+12/04 11:55 - {model_utils.py:46} -   - 5 lambda_15 (None, 1374)
+12/04 11:55 - {model_utils.py:46} -   - 6 h2 (None, 1056)
+12/04 11:55 - {model_utils.py:46} -   - 7 lambda_16 (None, 1056)
+12/04 11:55 - {model_utils.py:46} -   - 8 h3 (None, 443)
+12/04 11:55 - {model_utils.py:46} -   - 9 lambda_17 (None, 443)
+12/04 11:55 - {model_utils.py:46} -   - 10 h4 (None, 146)
+12/04 11:55 - {model_utils.py:46} -   - 11 lambda_18 (None, 146)
+12/04 11:55 - {model_utils.py:46} -   - 12 h5 (None, 26)
+12/04 11:55 - {model_utils.py:46} -   - 13 o_linear1 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 14 o_linear2 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 15 o_linear3 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 16 o_linear4 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 17 o_linear5 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 18 o_linear6 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 19 o1 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 20 o2 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 21 o3 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 22 o4 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 23 o5 (None, 1)
+12/04 11:55 - {model_utils.py:46} -   - 24 o6 (None, 1)
+12/04 11:55 - {prostate_models.py:305} - None
+12/04 11:55 - {prostate_models.py:306} - # of trainable params of the model is 65235
+12/04 11:55 - {nn.py:306} - 目前为：nn.py 文件，start fitting
+12/04 11:55 - {nn.py:214} - 现在根据梯度信息对网络的输出值进行了注意力强化 
+12/04 11:55 - {nn.py:318} - 目前为：nn.py 文件，class_weight {0: 1, 1: 1}
+12/04 11:58 - {nn.py:399} - 目前为：nn.py 文件，prediction threshold 0.33999999999999986
+12/04 11:59 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/04 11:59 - {evaluate.py:54} -               precision    recall  f1-score   support
+
+           0       0.78      0.87      0.82       145
+           1       0.79      0.68      0.73       108
+
+    accuracy                           0.79       253
+   macro avg       0.79      0.77      0.78       253
+weighted avg       0.79      0.79      0.78       253
+
+12/04 11:59 - {crossvalidation_pipeline.py:859} - 当前处于crossvalidation_pipeline.py文件中，model P-net_ALL -- Test score {'accuracy': 0.7865612648221344, 'precision': 0.7934782608695652, 'auc': 0.8416347381864624, 'f1': 0.7300000000000001, 'aupr': 0.8165253401041704, 'recall': 0.6759259259259259}
+12/04 11:59 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_testing_fold_2.csv
+12/04 11:59 - {crossvalidation_pipeline.py:863} - 目前在crossvalidation_pipeline.py这个文件中，saving coef
+12/04 11:59 - {crossvalidation_pipeline.py:55} - saving model P-net_ALL_2 coef to dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs)
+12/04 11:59 - {crossvalidation_pipeline.py:59} - FS dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs\P-net_ALL_2.h5)
+12/04 11:59 - {crossvalidation_pipeline.py:867} - 目前在crossvalidation_pipeline.py这个文件中，predicting training ...
+12/04 11:59 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/04 11:59 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_traing_fold_2.csv
+12/04 11:59 - {nn.py:156} - class_weight {0: 1, 1: 1}
+12/04 11:59 - {crossvalidation_pipeline.py:410} - fold # ----------------3---------
+12/04 11:59 - {one_split.py:316} - 现在是pipline/one_split.py文件，preprocessing....
+12/04 11:59 - {pre.py:10} - Pre-processing: None
+12/04 11:59 - {crossvalidation_pipeline.py:417} - 当前处于crossvalidation_pipeline.py文件中，现在进行特征提取！  feature extraction....
+12/04 11:59 - {data_reader.py:109} - loading mut_important
+12/04 11:59 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_final_analysis_set_cross_important_only.csv,
+12/04 11:59 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:59 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:59 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:59 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:59 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:59 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:59 - {data_reader.py:121} - mut_binary = True
+12/04 11:59 - {data_reader.py:109} - loading cnv_del
+12/04 11:59 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:59 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:59 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:59 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:59 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:59 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:59 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/04 11:59 - {data_reader.py:109} - loading cnv_amp
+12/04 11:59 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/04 11:59 - {data_reader.py:32} - loading from memory cached_data
+12/04 11:59 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/04 11:59 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/04 11:59 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/04 11:59 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/04 11:59 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/05 12:00 - {data_reader.py:275} - After combining, loaded data 1053 samples, 24765 variables, 1053 responses 
+12/05 12:00 - {prostate_models.py:149} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/05 12:00 - {prostate_models.py:151} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/05 12:00 - {builders_utils.py:105} - layer 0 , # of edges  14836.0
+12/05 12:00 - {builders_utils.py:105} - layer 1 , # of edges  1396.0
+12/05 12:00 - {builders_utils.py:105} - layer 2 , # of edges  1070.0
+12/05 12:00 - {builders_utils.py:105} - layer 3 , # of edges  447.0
+12/05 12:00 - {builders_utils.py:105} - layer 4 , # of edges  148.0
+12/05 12:00 - {builders_utils.py:105} - layer 5 , # of edges  26.0
+12/05 12:00 - {builders_utils.py:901} - n_genes, n_pathways 8255 1374 
+12/05 12:00 - {builders_utils.py:901} - n_genes, n_pathways 1374 1056 
+12/05 12:01 - {builders_utils.py:901} - n_genes, n_pathways 1056 443 
+12/05 12:01 - {builders_utils.py:901} - n_genes, n_pathways 443 146 
+12/05 12:01 - {builders_utils.py:901} - n_genes, n_pathways 146 26 
+12/05 12:01 - {prostate_models.py:301} - 目前在prostate_models.py文件中， done compiling
+12/05 12:01 - {model_utils.py:46} -   - 0 inputs (None, 24765)
+12/05 12:01 - {model_utils.py:46} -   - 1 lambda_19 (None, 24765)
+12/05 12:01 - {model_utils.py:46} -   - 2 h0 (None, 8255)
+12/05 12:01 - {model_utils.py:46} -   - 3 lambda_20 (None, 8255)
+12/05 12:01 - {model_utils.py:46} -   - 4 h1 (None, 1374)
+12/05 12:01 - {model_utils.py:46} -   - 5 lambda_21 (None, 1374)
+12/05 12:01 - {model_utils.py:46} -   - 6 h2 (None, 1056)
+12/05 12:01 - {model_utils.py:46} -   - 7 lambda_22 (None, 1056)
+12/05 12:01 - {model_utils.py:46} -   - 8 h3 (None, 443)
+12/05 12:01 - {model_utils.py:46} -   - 9 lambda_23 (None, 443)
+12/05 12:01 - {model_utils.py:46} -   - 10 h4 (None, 146)
+12/05 12:01 - {model_utils.py:46} -   - 11 lambda_24 (None, 146)
+12/05 12:01 - {model_utils.py:46} -   - 12 h5 (None, 26)
+12/05 12:01 - {model_utils.py:46} -   - 13 o_linear1 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 14 o_linear2 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 15 o_linear3 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 16 o_linear4 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 17 o_linear5 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 18 o_linear6 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 19 o1 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 20 o2 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 21 o3 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 22 o4 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 23 o5 (None, 1)
+12/05 12:01 - {model_utils.py:46} -   - 24 o6 (None, 1)
+12/05 12:01 - {prostate_models.py:305} - None
+12/05 12:01 - {prostate_models.py:306} - # of trainable params of the model is 65235
+12/05 12:01 - {nn.py:306} - 目前为：nn.py 文件，start fitting
+12/05 12:01 - {nn.py:214} - 现在根据梯度信息对网络的输出值进行了注意力强化 
+12/05 12:01 - {nn.py:318} - 目前为：nn.py 文件，class_weight {0: 1, 1: 1}
+12/05 12:03 - {nn.py:399} - 目前为：nn.py 文件，prediction threshold 0.3899999999999999
+12/05 12:04 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/05 12:04 - {evaluate.py:54} -               precision    recall  f1-score   support
+
+           0       0.86      0.89      0.88       144
+           1       0.85      0.81      0.83       108
+
+    accuracy                           0.86       252
+   macro avg       0.86      0.85      0.85       252
+weighted avg       0.86      0.86      0.86       252
+
+12/05 12:04 - {crossvalidation_pipeline.py:859} - 当前处于crossvalidation_pipeline.py文件中，model P-net_ALL -- Test score {'accuracy': 0.8571428571428571, 'precision': 0.8461538461538461, 'auc': 0.9095936213991769, 'f1': 0.830188679245283, 'aupr': 0.8546768916650412, 'recall': 0.8148148148148148}
+12/05 12:04 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_testing_fold_3.csv
+12/05 12:04 - {crossvalidation_pipeline.py:863} - 目前在crossvalidation_pipeline.py这个文件中，saving coef
+12/05 12:04 - {crossvalidation_pipeline.py:55} - saving model P-net_ALL_3 coef to dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs)
+12/05 12:04 - {crossvalidation_pipeline.py:59} - FS dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs\P-net_ALL_3.h5)
+12/05 12:04 - {crossvalidation_pipeline.py:867} - 目前在crossvalidation_pipeline.py这个文件中，predicting training ...
+12/05 12:04 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/05 12:04 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_traing_fold_3.csv
+12/05 12:04 - {nn.py:156} - class_weight {0: 1, 1: 1}
+12/05 12:04 - {crossvalidation_pipeline.py:410} - fold # ----------------4---------
+12/05 12:04 - {one_split.py:316} - 现在是pipline/one_split.py文件，preprocessing....
+12/05 12:04 - {pre.py:10} - Pre-processing: None
+12/05 12:04 - {crossvalidation_pipeline.py:417} - 当前处于crossvalidation_pipeline.py文件中，现在进行特征提取！  feature extraction....
+12/05 12:04 - {data_reader.py:109} - loading mut_important
+12/05 12:04 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_final_analysis_set_cross_important_only.csv,
+12/05 12:04 - {data_reader.py:32} - loading from memory cached_data
+12/05 12:04 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/05 12:04 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/05 12:04 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/05 12:04 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/05 12:04 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/05 12:04 - {data_reader.py:121} - mut_binary = True
+12/05 12:04 - {data_reader.py:109} - loading cnv_del
+12/05 12:04 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/05 12:04 - {data_reader.py:32} - loading from memory cached_data
+12/05 12:04 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/05 12:04 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/05 12:04 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/05 12:04 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/05 12:04 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/05 12:05 - {data_reader.py:109} - loading cnv_amp
+12/05 12:05 - {data_reader.py:30} - loading data from D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_database\prostate\processed\P1000_data_CNA_paper.csv,
+12/05 12:05 - {data_reader.py:32} - loading from memory cached_data
+12/05 12:05 - {data_reader.py:37} - 当前所导入的数据的形状为：(1053, 8255)
+12/05 12:05 - {data_reader.py:40} - 目前处于data_reader.py文件，loading from memory cached_data
+12/05 12:05 - {data_reader.py:73} - 目前处于data_reader.py文件，目前来读取数据  some genes dont exist in the original data set
+12/05 12:05 - {data_reader.py:79} - 目前处于data/prostate_paper/data_reader.py文件，loaded data 1053 samples, 8255 variables, 1053 responses 
+12/05 12:05 - {data_reader.py:80} - 目前处于data/prostate_paper/data_reader.py文件， 目前所读取的基因长度为：8255 
+12/05 12:05 - {data_reader.py:275} - After combining, loaded data 1053 samples, 24765 variables, 1053 responses 
+12/05 12:05 - {prostate_models.py:149} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/05 12:05 - {prostate_models.py:151} - x shape (1053, 24765) , y shape (1053, 1) info (1053,) genes (24765,)
+12/05 12:06 - {builders_utils.py:105} - layer 0 , # of edges  14836.0
+12/05 12:06 - {builders_utils.py:105} - layer 1 , # of edges  1396.0
+12/05 12:06 - {builders_utils.py:105} - layer 2 , # of edges  1070.0
+12/05 12:06 - {builders_utils.py:105} - layer 3 , # of edges  447.0
+12/05 12:06 - {builders_utils.py:105} - layer 4 , # of edges  148.0
+12/05 12:06 - {builders_utils.py:105} - layer 5 , # of edges  26.0
+12/05 12:06 - {builders_utils.py:901} - n_genes, n_pathways 8255 1374 
+12/05 12:06 - {builders_utils.py:901} - n_genes, n_pathways 1374 1056 
+12/05 12:06 - {builders_utils.py:901} - n_genes, n_pathways 1056 443 
+12/05 12:06 - {builders_utils.py:901} - n_genes, n_pathways 443 146 
+12/05 12:06 - {builders_utils.py:901} - n_genes, n_pathways 146 26 
+12/05 12:06 - {prostate_models.py:301} - 目前在prostate_models.py文件中， done compiling
+12/05 12:06 - {model_utils.py:46} -   - 0 inputs (None, 24765)
+12/05 12:06 - {model_utils.py:46} -   - 1 lambda_25 (None, 24765)
+12/05 12:06 - {model_utils.py:46} -   - 2 h0 (None, 8255)
+12/05 12:06 - {model_utils.py:46} -   - 3 lambda_26 (None, 8255)
+12/05 12:06 - {model_utils.py:46} -   - 4 h1 (None, 1374)
+12/05 12:06 - {model_utils.py:46} -   - 5 lambda_27 (None, 1374)
+12/05 12:06 - {model_utils.py:46} -   - 6 h2 (None, 1056)
+12/05 12:06 - {model_utils.py:46} -   - 7 lambda_28 (None, 1056)
+12/05 12:06 - {model_utils.py:46} -   - 8 h3 (None, 443)
+12/05 12:06 - {model_utils.py:46} -   - 9 lambda_29 (None, 443)
+12/05 12:06 - {model_utils.py:46} -   - 10 h4 (None, 146)
+12/05 12:06 - {model_utils.py:46} -   - 11 lambda_30 (None, 146)
+12/05 12:06 - {model_utils.py:46} -   - 12 h5 (None, 26)
+12/05 12:06 - {model_utils.py:46} -   - 13 o_linear1 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 14 o_linear2 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 15 o_linear3 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 16 o_linear4 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 17 o_linear5 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 18 o_linear6 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 19 o1 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 20 o2 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 21 o3 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 22 o4 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 23 o5 (None, 1)
+12/05 12:06 - {model_utils.py:46} -   - 24 o6 (None, 1)
+12/05 12:06 - {prostate_models.py:305} - None
+12/05 12:06 - {prostate_models.py:306} - # of trainable params of the model is 65235
+12/05 12:06 - {nn.py:306} - 目前为：nn.py 文件，start fitting
+12/05 12:06 - {nn.py:214} - 现在根据梯度信息对网络的输出值进行了注意力强化 
+12/05 12:06 - {nn.py:318} - 目前为：nn.py 文件，class_weight {0: 1, 1: 1}
+12/05 12:07 - {nn.py:399} - 目前为：nn.py 文件，prediction threshold 0.34999999999999987
+12/05 12:10 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/05 12:10 - {evaluate.py:54} -               precision    recall  f1-score   support
+
+           0       0.90      0.85      0.88       144
+           1       0.82      0.88      0.85       108
+
+    accuracy                           0.87       252
+   macro avg       0.86      0.87      0.86       252
+weighted avg       0.87      0.87      0.87       252
+
+12/05 12:10 - {crossvalidation_pipeline.py:859} - 当前处于crossvalidation_pipeline.py文件中，model P-net_ALL -- Test score {'accuracy': 0.8650793650793651, 'precision': 0.8189655172413793, 'auc': 0.9052211934156378, 'f1': 0.8482142857142858, 'aupr': 0.8729852363777156, 'recall': 0.8796296296296297}
+12/05 12:10 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_testing_fold_4.csv
+12/05 12:10 - {crossvalidation_pipeline.py:863} - 目前在crossvalidation_pipeline.py这个文件中，saving coef
+12/05 12:10 - {crossvalidation_pipeline.py:55} - saving model P-net_ALL_4 coef to dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs)
+12/05 12:10 - {crossvalidation_pipeline.py:59} - FS dir (D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\fs\P-net_ALL_4.h5)
+12/05 12:10 - {crossvalidation_pipeline.py:867} - 目前在crossvalidation_pipeline.py这个文件中，predicting training ...
+12/05 12:10 - {crossvalidation_pipeline.py:295} - 现在这个是one_split.py文件,  predicitng ...
+12/05 12:10 - {crossvalidation_pipeline.py:188} - 目前是在crossvalidation_pipeline.py文件中，现在是来保存模型的预测结果  saving : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_traing_fold_4.csv
+12/05 12:10 - {one_split.py:245} - 目前是在one_split.py 文件中， saving coef 
+12/05 12:10 - {one_split.py:245} - 目前是在one_split.py 文件中， saving coef 
+12/05 12:10 - {one_split.py:245} - 目前是在one_split.py 文件中， saving coef 
+12/05 12:10 - {one_split.py:245} - 目前是在one_split.py 文件中， saving coef 
+12/05 12:10 - {one_split.py:245} - 目前是在one_split.py 文件中， saving coef 
+12/05 12:10 - {crossvalidation_pipeline.py:883} - [{'accuracy': 0.8616600790513834, 'precision': 0.8288288288288288, 'auc': 0.9236909323116219, 'f1': 0.8401826484018264, 'aupr': 0.8932925339517093, 'recall': 0.8518518518518519}, {'accuracy': 0.8656126482213439, 'precision': 0.8936170212765957, 'auc': 0.9055555555555556, 'f1': 0.8316831683168316, 'aupr': 0.8870851513018843, 'recall': 0.7777777777777778}, {'accuracy': 0.7865612648221344, 'precision': 0.7934782608695652, 'auc': 0.8416347381864624, 'f1': 0.7300000000000001, 'aupr': 0.8165253401041704, 'recall': 0.6759259259259259}, {'accuracy': 0.8571428571428571, 'precision': 0.8461538461538461, 'auc': 0.9095936213991769, 'f1': 0.830188679245283, 'aupr': 0.8546768916650412, 'recall': 0.8148148148148148}, {'accuracy': 0.8650793650793651, 'precision': 0.8189655172413793, 'auc': 0.9052211934156378, 'f1': 0.8482142857142858, 'aupr': 0.8729852363777156, 'recall': 0.8796296296296297}]
+12/05 12:10 - {crossvalidation_pipeline.py:1444} - 目前在crossvalidation_pipeline.py这个文件中，saving yml : D:\DailyCode\P-Net\CodeModel\(Father)pnet_prostate_paper-published_to_zenodo\KANN\cBioPortal\_logs\p1000\./pnet/crossvalidation_average_reg_10_tanh\P-net_ALL_params.yml
+12/05 12:10 - {crossvalidation_pipeline.py:170} - scores
+12/05 12:10 - {crossvalidation_pipeline.py:171} -    accuracy  precision       auc        f1      aupr    recall
+0  0.861660   0.828829  0.923691  0.840183  0.893293  0.851852
+1  0.865613   0.893617  0.905556  0.831683  0.887085  0.777778
+2  0.786561   0.793478  0.841635  0.730000  0.816525  0.675926
+3  0.857143   0.846154  0.909594  0.830189  0.854677  0.814815
+4  0.865079   0.818966  0.905221  0.848214  0.872985  0.879630
+12/05 12:10 - {crossvalidation_pipeline.py:172} - mean
+12/05 12:10 - {crossvalidation_pipeline.py:173} - accuracy     0.847211
+precision    0.836209
+auc          0.897139
+f1           0.816054
+aupr         0.864913
+recall       0.800000
+dtype: float64
+12/05 12:10 - {crossvalidation_pipeline.py:174} - std
+12/05 12:10 - {crossvalidation_pipeline.py:175} - accuracy     0.034072
+precision    0.037324
+auc          0.031926
+f1           0.048646
+aupr         0.030856
+recall       0.079274
+dtype: float64
+12/05 12:10 - {run_me.py:144} - Elapsed Time: 23m 26s

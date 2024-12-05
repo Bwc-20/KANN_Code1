@@ -1,0 +1,8 @@
+当前数据集一共是分成四个部分：MCTP、PRAD、SU2C、TCGA，每个部分分别包含三个文件
+以SU2C为例，其中SU2C文件表示突变，这文件中关键的是 Hugo_Symbol（第一列）与Tumor_Sample_Barcode（第Q列）这两列分别表示基因与样本，如果在该文件中，某个基因出现在这个样本里面那就说明这个基因在该样本中发生了突变，否则的话就没发生突变
+TCGA_clinical  表示样本类别的文件，该文件中 重点关注 SAMPLE_ID与 SAMPLE_TYPE  这两列分别表示样本编号以及这个样本所属的类别
+      注意：SU2C_clinical文件中没有 SAMPLE_TYPE这一列，它里面的所有样本都是转移性Metastasis这一类       而MCTP与PRAD中的SAMPLE_TYPE 这一列中，后面有大量的样本没有类别取值，像这种情况，就说明这一样本不能要了（凡是SAMPLE_TYPE值缺失的那些样本就全部移除
+TCGA_cna 就是CNV数据，正值就是扩增，负值就是缺失
+
+ 
+
