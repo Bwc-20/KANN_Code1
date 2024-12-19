@@ -1,7 +1,7 @@
 # About The Project
 KANN: Knowledge-embedded asynchronous deep p-neural network for prostate cancer metastasis prediction
 
-There are two implementations of our KANN, including KANN (NPCP) and KANN (cBioPortal), corresponding to the two datasets used in this study, NPCP and cBioPortal, respectively.  Both implementations differ only in the gene layer, others are the same. The codes for both implementations and their used datasets are stored in the above folders NPCP and cBioPortal, respectively.
+Our KANN is validated on two datasets, NPCP and cBioPortal, respectively. The details of these datasets as well as the codes and validation results for KANN are stored in the above folders NPCP and cBioPortal, respectively. The code files for the implementation of KANN in the above folders are the same, but the data files in these folders are different.
 
 # Getting Started
 To get a local copy up and running, follow these simple steps
@@ -18,7 +18,7 @@ To get a local copy up and running, follow these simple steps
    `conda env create --name KANN_env --file=environment.yml`
  
 # Usage
-Both implementations of KANN, KANN (NPCP) and KANN (cBioPortal), perform the same operations at runtime. We take the KANN (NPCP) as an example to introduce the running of KANN.
+We perform the same operations for the implementation and validation of KANN on the NPCP and cBioPortal datasets, respectively. We take the NPCP dataset as an example to introduce the running of KANN.
 
 * Activate the created conda environment (Please create your project environment based on environment.yml)
 
